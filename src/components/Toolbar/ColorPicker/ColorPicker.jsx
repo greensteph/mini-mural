@@ -18,7 +18,8 @@ class ColorPicker extends React.Component {
     const { currentColor } = this.props;
     const colorBoxes = COLOR_PICKER_DEFAULT.map(color => (
       <ColorBox
-        color={color}
+        color={color.colorValue}
+        colorName={color.colorName}
         onClick={this.pickColor}
         active={currentColor === color}
         key={uniqueId()}

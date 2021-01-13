@@ -7,7 +7,8 @@ import "./styles.css";
 class ColorBox extends React.Component {
   static propTypes = {
     onClick: PropTypes.func,
-    color: PropTypes.string.isRequired
+    color: PropTypes.string.isRequired,
+    colorName: PropTypes.string.isRequired
   };
 
   handleClick = e => {
@@ -32,12 +33,13 @@ class ColorBox extends React.Component {
   };
 
   render() {
-    const { color, active } = this.props;
+    const { color, colorName, active } = this.props;
     const className = classnames("colorBox", { activeBox: active });
 
     return (
-      <div
+      <button
         className={className}
+        aria-label={colorName}
         onClick={this.handleClick}
         data-color={color}
         style={{ background: color, border: this.getBorderStyle() }}

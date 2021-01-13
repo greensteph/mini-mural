@@ -21,7 +21,7 @@ To clone and run this application, you'll need Git, Node.js and Yarn installed o
 $ git clone https://github.com/amitmerchant1990/electron-markdownify
 
 # Go into the repository
-$ cd react-mini-mural
+$ cd mini-mural
 
 # Install dependencies
 $ yarn install

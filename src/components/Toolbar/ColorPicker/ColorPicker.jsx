@@ -21,7 +21,7 @@ class ColorPicker extends React.Component {
         color={color.colorValue}
         colorName={color.colorName}
         onClick={this.pickColor}
-        active={currentColor === color}
+        active={currentColor === color.colorValue}
         key={uniqueId()}
       />
     ));

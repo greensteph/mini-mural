@@ -52,8 +52,8 @@ class Mural extends React.Component {
       color: currentColor,
       width,
       height,
-      x: x - pixelsToInt(width) / 2,
-      y: y - pixelsToInt(height) / 2
+      x: x - pixelsToInt(width) + 200,
+      y: y - pixelsToInt(height) + 125
     };
 
     addNote(noteToAdd);
@@ -94,11 +94,11 @@ class Mural extends React.Component {
     );
 
     return (
-      <div id="Mural" className="Mural" ref={this.mural}>
+      <main id="Mural" className="Mural" ref={this.mural}>
         <Welcome />
         {StickyNotes}
         <Toolbar />
-      </div>
+      </main>
     );
   }
 }

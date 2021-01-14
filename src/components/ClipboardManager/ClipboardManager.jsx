@@ -50,6 +50,7 @@ class ClipboardManager extends React.Component {
           <div className="clipboard-icon">
             <i className="fa fa-clipboard" aria-hidden="true" />
             <span className="clipboard-counter">{clipboardCount}</span>
+            <span className="sr-only"> sticky note copied</span>
           </div>
         ) : null}
       </div>

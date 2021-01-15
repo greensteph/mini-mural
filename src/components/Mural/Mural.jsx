@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Toolbar from "../Toolbar";
 import StickyNote from "../StickyNote";
-
 import { NOTE_DEFAULT_HEIGHT, NOTE_DEFAULT_WIDTH } from "../../constants";
 import { pixelsToInt } from "../../utils";
 import "./styles.css";
@@ -60,8 +59,13 @@ class Mural extends React.Component {
   };
 
   handleKeyDown = e => {
+    console.log(`key ${e.key}`);
     if (e.key === "Shift") {
       this.props.enableMultipleSelection();
+    } else {
+      if (e.keyCode === 32) {
+        this.addNoteToMural(e);
+      }
     }
   };
 

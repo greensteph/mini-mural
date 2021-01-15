@@ -39,6 +39,7 @@ class ColorBox extends React.Component {
     return (
       <button
         className={className}
+        tabIndex="0"
         aria-label={colorName}
         onClick={this.handleClick}
         data-color={color}

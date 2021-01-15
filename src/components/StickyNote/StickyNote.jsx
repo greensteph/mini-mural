@@ -96,13 +96,14 @@ class StickyNote extends React.Component {
     });
 
     const textColor = Color(color)
-      .darken(0.4)
+      .darken(0.8)
       .desaturate(0.3);
     const boxShadowColor = Color(color).darken(0.1);
 
     return (
       <div
         className={StickyNoteClassnames}
+        tabIndex="0"
         style={{
           width,
           height,
@@ -120,6 +121,7 @@ class StickyNote extends React.Component {
           id={id}
           data-type="sticky-note"
         >
+          <span className="sr-only">Stickynote</span>
           <p
             className="sticky-note-content"
             contentEditable={editMode}

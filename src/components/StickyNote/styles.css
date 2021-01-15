@@ -38,5 +38,5 @@
 }
 
 .sticky-note-content:focus {
-  outline: none;
+  color: blue;
 }
